@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+    <script>
+        function myfunction(){
+            var a= document.getElementById("pwd").value;
+            var b=document.getElementById("pwds").value;
+            if(a==""){
+                document.getElementById("message").innerHTML="**Please enter Password**";
+                return false;
+            }
+            if(a!=b){
+                document.getElementById("messages").innerHTML="**Password did not match**";
+                return false;
+            }
+        
+        var e=document.myform.ema.value;
+        if(e.indexOf('@')<0){
+            document.getElementById("emailmsg").innerHTML="Invalid email address";
+            return false;
+        }
+        
+        }
+        </script>
+</head>
+<body>
+	
+
+<form action="/action_page.php" method="post" id="registration_form" onsubmit="return myfunction()" name="myform">
+<div class="wrapper">
+  <div class="payment">
+    <h2>Registration Form</h2>
+    <div class="form">
+      <div class="form space icon-relative">
+        <label class="label">First Name:</label>
+        <input type="text" class="input" placeholder="First Name" required>
+        <label class="label">Middle Name:</label>
+        <input type="text" class="input" placeholder="Middle Name" required>
+        <label class="label">Last Name:</label>
+        <input type="text" class="input" placeholder="Last Name" required>
+      </div>
+      <div class="form-grp space">
+        <div class="form-item icon-relative">
+          <label class="label">Date Of Birth:</label>
+          <input id="dob" type="text" name="dob" class="input" data-mask="00 / 00 / 0000"  placeholder="00 / 00 / 0000" required>
+          
+        </div>
+        <div class="form-item icon-relative">
+          <label class="label">Country Code:</label>
+          <input type="text" class="input" data-mask="000" placeholder="000" required>
+         
+        </div>
+      </div>
+
+      <div class="form-grp space">
+        <div class="form-item icon-relative">
+          <label class="label">Gender:</label>
+          <select type="text" name="gender" class="input" placeholder="Male/Female" required>
+            <option>Male</option>
+            <option>Female</option>
+          </select> 
+        </div>
+        <div class="form-item icon-relative">
+          <label class="label">Contact Number:</label>
+          <input type="text" class="input" data-mask="0000000000" placeholder="0000000000" required>
+          <select class="num">
+              <option>+91</option>
+              <option>+81</option>
+              <option>+71</option>
+          </select>
+        </div>
+      </div>
+      <div class="form space icon-relative">
+        <label class="label">Email:</label>
+        <input type="text" class="input" placeholder="email" name="ema" value="">
+        <span id="emailmsg" style="color: red;"></span>
+      </div>
+
+      <div class="form space icon-relative">
+        <label class="label">Password:</label>
+        <input type="password" value="" id="pwd" class="input" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <span id="message" style="color: red;"></span><br>
+        <label class="label">Re-enter Password:</label>
+        <input type="password" value="" id="pwds" class="input" placeholder="re-enter Password">
+        <span id="messages" style="color: red;"></span>
+        
+      </div>
+      
+        
+      <div>
+         <input class="btn" type="submit">
+      </div> 
+      <a href="payment.html" type="submit" class="next-btn" id="next">Next</a>
+      
+      
+    </div>
+  </div>
+</div>
+</form>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    
+
+</body>
+</html>

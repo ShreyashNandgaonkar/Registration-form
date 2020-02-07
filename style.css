@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open_regular',"arial";
+  }
+  
+  body{
+    background: #193957;
+    margin: 0 10px;
+  }
+  
+  .payment{
+    background: #f8f8f8;
+    max-width: 700px;
+    margin: 80px auto;
+    height: auto;
+    padding: 35px;
+    padding-top: 70px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .payment h2{
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #0d3c61;
+  }
+  
+  .form .label{
+    display: inline;
+    color: #555555;
+    line-height: 30px;
+    
+  }
+  
+
+  .input{
+    
+    padding: 13px 0px 13px 25px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    outline: none;
+    font-size: 16px;
+    color: #555555;
+    
+    
+  }
+
+.num{
+
+    position: relative;
+    width:50px;
+    border-radius: 3px;
+    height:47px;
+    top:-47px;
+    right:-1px;
+    border: 2px thin #dddddd;
+    color:black;
+}
+  .form-grp{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .form-item{
+    width: 48%;
+  }
+  
+  .space{
+    margin-bottom: 20px;
+    
+  }
+  
+  .icon-relative{
+    position: relative;
+  }
+  
+  .icon-relative .fas{
+    position: absolute;
+    bottom: 18px;
+    left: 15px;
+    font-size: 20px;
+    color: #555555;
+  }
+
+  .icon-relative .fas,
+  .icon-relative .far{
+    position: absolute;
+    bottom: 12px;
+    left: 15px;
+    font-size: 20px;
+    color: #555555;
+  }
+  
+  .btn{
+    width:628px;
+    margin-top: 40px;
+    background: #ff8000;
+    padding: 12px;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 5px;
+    border:1px solid #555555;
+    cursor: pointer;
+  }
+
+
+  .next-btn{
+    width:80px;
+    margin-left: 270px;
+    display: flex;
+    margin-top: 30px;
+    background: #e4907b;
+    padding: 12px;
+    justify-content: center;
+    color: whitesmoke;
+    border-radius: 5px;
+    border:1px solid #555555;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  
+  @media screen and (max-width: 420px){
+    .form-grp{
+      flex-direction: column;
+    }
+    .form-item{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .btn{
+      margin-top: 20px;
+    }
+  }
+
+  
